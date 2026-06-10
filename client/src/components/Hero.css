@@ -7,34 +7,27 @@
 
 .hero-container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  flex-wrap: wrap-reverse;
 }
 
 .hero-content {
-  flex: 1;
-  min-width: 300px;
+  max-width: 800px;
 }
 
-.hero-image-wrapper {
-  flex: 1;
+.hero-header-row {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-width: 300px;
+  gap: 1.5rem;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 
-.hero-image {
-  max-width: 100%;
-  width: 350px;
-  height: 350px;
+.hero-profile-pic {
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 10px 30px -10px var(--primary-color);
-  border: 4px solid var(--card-bg);
+  box-shadow: 0 5px 15px -5px var(--primary-color);
+  border: 3px solid var(--card-bg);
 }
 
 .hero-greeting {
@@ -45,10 +38,17 @@
 }
 
 .hero-name {
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4.5rem);
   color: var(--text-main);
   line-height: 1.1;
   margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    white-space: normal;
+  }
 }
 
 .hero-title {

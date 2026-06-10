@@ -14,23 +14,31 @@ const Contact = () => {
     setStatus('sending');
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const googleFormURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMwQu9pfLj-6Qce6FIyWIIGgEU9bpiAo1oHIWviNxY7bvn_g/formResponse';
+      const formParams = new URLSearchParams();
+      formParams.append('entry.2106597799', formData.name);
+      formParams.append('entry.1599545691', formData.email);
+      formParams.append('entry.1943995885', formData.message);
+
+      await fetch(googleFormURL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formParams
       });
 
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('error');
-      }
+      // Since mode is 'no-cors', the response will be opaque. We assume success if the fetch completes.
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error(error);
       setStatus('error');
     }
   };
+
+  const closePopup = () => setStatus(null);
 
   return (
     <section id="contact" className="section">
@@ -69,13 +77,30 @@ const Contact = () => {
               <button type="submit" className="btn btn-primary" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
-              
-              {status === 'success' && <p className="status-msg success">Message sent successfully!</p>}
-              {status === 'error' && <p className="status-msg error">Something went wrong. Please try again.</p>}
             </form>
           </div>
         </div>
       </div>
+
+      {/* Confirmation Popup */}
+      {(status === 'success' || status === 'error') && (
+        <div className="modal-overlay" onClick={closePopup}>
+          <div className={`modal-content ${status}`} onClick={(e) => e.stopPropagation()}>
+            {status === 'success' ? (
+              <>
+                <h3>Success!</h3>
+                <p>Your message has been sent successfully. I'll get back to you soon.</p>
+              </>
+            ) : (
+              <>
+                <h3>Oops!</h3>
+                <p>Something went wrong. Please try again later.</p>
+              </>
+            )}
+            <button className="modal-close-btn" onClick={closePopup}>Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

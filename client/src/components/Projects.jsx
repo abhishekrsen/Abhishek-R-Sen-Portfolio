@@ -34,6 +34,13 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        
+        <div className="projects-summary glass-card delay-300 animate-fade-in-up" style={{ marginTop: '3rem', padding: '2rem', textAlign: 'center' }}>
+          <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Additional Experience</h3>
+          <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>
+            Beyond the highlights above, I have completed numerous projects as part of my college curriculum and through a side business at home. My hands-on experience includes over <strong>6+ IoT projects</strong> and <strong>3+ Web Development projects</strong>, constantly pushing me to learn and build functional real-world solutions.
+          </p>
+        </div>
       </div>
     </section>
   );

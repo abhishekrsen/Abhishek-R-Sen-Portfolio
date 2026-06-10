@@ -57,6 +57,10 @@ const Contact = () => {
                 <span className="icon">☎</span>
                 <a href="tel:6282978008">+91 6282978008</a>
               </div>
+              <div className="contact-item">
+                <span className="icon">📍</span>
+                <span>Neyyatinkara, Trivandrum</span>
+              </div>
             </div>
           </div>
 

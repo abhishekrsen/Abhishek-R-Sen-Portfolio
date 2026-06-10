@@ -7,21 +7,28 @@
 
 .hero-container {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap-reverse;
 }
 
 .hero-content {
-  max-width: 800px;
+  flex: 1;
+  min-width: 300px;
 }
 
-.hero-subtitle-row {
+.hero-image-wrapper {
+  flex: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+  min-width: 300px;
 }
 
-.hero-profile-pic {
+.hero-image {
+  max-width: 100%;
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -55,7 +62,7 @@
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: var(--text-muted);
   line-height: 1.2;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {

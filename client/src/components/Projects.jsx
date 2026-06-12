@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Smart Garbage Management System",
       description: "An IoT-based system using sensors and an ESP32 CAM for sorting waste. It detects the type of waste and streams live video to a custom website built with HTML, CSS, and JavaScript.",
       techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"],
-      reportLink: "https://drive.google.com/file/d/1-Oem3aK4jWU1Qd_Bnsx2eEi_a-Ma00Ub/view?usp=drive_link"
+      reportLink: "https://drive.google.com/file/d/1YEcMGSgfwmGjjiPVbOGfh4-9xAw8ayJN/view?usp=drive_link"
     },
     {
       title: "Distance Measurement Device",

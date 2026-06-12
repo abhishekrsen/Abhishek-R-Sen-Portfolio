@@ -33,7 +33,7 @@ const Projects = () => {
                 </ul>
                 {project.reportLink && (
                   <div style={{ marginTop: '1.5rem' }}>
-                    <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                    <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
                       View Report
                     </a>
                   </div>

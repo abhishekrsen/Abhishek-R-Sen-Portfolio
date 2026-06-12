@@ -6,7 +6,8 @@ const Projects = () => {
     {
       title: "Smart Garbage Management System",
       description: "An IoT-based system using sensors and an ESP32 CAM for sorting waste. It detects the type of waste and streams live video to a custom website built with HTML, CSS, and JavaScript.",
-      techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"]
+      techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"],
+      reportLink: "https://drive.google.com/file/d/1-Oem3aK4jWU1Qd_Bnsx2eEi_a-Ma00Ub/view?usp=drive_link"
     },
     {
       title: "Distance Measurement Device",
@@ -30,6 +31,13 @@ const Projects = () => {
                     <li key={i}>{tech}</li>
                   ))}
                 </ul>
+                {project.reportLink && (
+                  <div style={{ marginTop: '1.5rem' }}>
+                    <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                      View Report
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}

@@ -186,7 +186,7 @@ a:hover {
   z-index: 10;
   border-radius: 6px;
   border: 1px solid var(--border-color);
-  top: calc(100% + 5px);
+  top: 100%;
   left: 0;
   backdrop-filter: blur(10px);
 }

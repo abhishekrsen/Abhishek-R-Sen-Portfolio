@@ -7,7 +7,11 @@ const Projects = () => {
       title: "Smart Garbage Management System",
       description: "An IoT-based system using sensors and an ESP32 CAM for sorting waste. It detects the type of waste and streams live video to a custom website built with HTML, CSS, and JavaScript.",
       techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"],
-      reportLink: "https://drive.google.com/file/d/1YEcMGSgfwmGjjiPVbOGfh4-9xAw8ayJN/view?usp=drive_link"
+      reportLink: "https://drive.google.com/file/d/1YEcMGSgfwmGjjiPVbOGfh4-9xAw8ayJN/view?usp=drive_link",
+      codeLinks: [
+        { name: "Camera", url: "https://drive.google.com/file/d/1HoXVaWyebGqbxlNhFYAh0nh45botSTPP/view?usp=sharing" },
+        { name: "Arduino", url: "https://drive.google.com/file/d/1p3Oe0FKPgyY15Mczu9I0sKMy4S6BvFWv/view?usp=sharing" }
+      ]
     },
     {
       title: "Distance Measurement Device",
@@ -31,13 +35,25 @@ const Projects = () => {
                     <li key={i}>{tech}</li>
                   ))}
                 </ul>
-                {project.reportLink && (
-                  <div style={{ marginTop: '1.5rem' }}>
+                <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  {project.reportLink && (
                     <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
                       View Report
                     </a>
-                  </div>
-                )}
+                  )}
+                  {project.codeLinks && (
+                    <div className="dropdown">
+                      <button className="btn btn-outline btn-sm dropdown-btn">Code ▾</button>
+                      <div className="dropdown-content">
+                        {project.codeLinks.map((link, idx) => (
+                          <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer">
+                            {link.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           ))}

@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="container hero-container">
         <div className="hero-content animate-slide-in-left">
-          <p className="hero-greeting">Hi, my name is</p>
+          <p className="hero-greeting">My name is</p>
           <h1 className="hero-name">Abhishek R Sen.</h1>
           <h2 className="hero-title">I build things for the web and the physical world.</h2>
           <p className="hero-subtitle delay-200 animate-fade-in-up">

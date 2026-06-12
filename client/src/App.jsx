@@ -4,10 +4,12 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import WelcomeScreen from './components/WelcomeScreen';
 
 function App() {
   return (
     <div className="App">
+      <WelcomeScreen />
       <main>
         <Hero />
         <About />

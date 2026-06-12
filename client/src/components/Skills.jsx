@@ -4,9 +4,9 @@ import './Skills.css';
 const Skills = () => {
   const skills = [
     { category: "Web Technologies", items: ["HTML", "CSS", "JavaScript", "React", "Node.js"] },
-    { category: "Embedded Systems & IoT", items: ["Embedded C", "Microcontroller Programming", "Sensor Integration", "Hardware-Software Integration"] },
+    { category: "Embedded Systems & IoT", items: ["IoT Development", "Microcontroller Programming", "Sensor Integration", "Hardware-Software Integration"] },
     { category: "Editing Software", items: ["DaVinci Resolve", "Adobe Photoshop"] },
-    { category: "Languages & Others", items: ["Python", "MS Office (Word, Excel)"] },
+    { category: "Languages & Others", items: ["Embedded C", "Python", "MS Office (Word, Excel)"] },
     { category: "Soft Skills", items: ["Problem Solving", "Analytical Skills"] }
   ];
 

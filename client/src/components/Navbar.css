@@ -33,9 +33,9 @@
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: var(--text-main);
   text-decoration: none;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(135deg, #ffffff, var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: transform 0.3s ease;
@@ -52,7 +52,7 @@
 }
 
 .nav-link {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -67,12 +67,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--accent-color);
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: var(--text-main);
 }
 
 .nav-link:hover::after {

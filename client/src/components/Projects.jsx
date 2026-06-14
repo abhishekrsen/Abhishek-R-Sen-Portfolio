@@ -5,7 +5,7 @@ const Projects = () => {
   const projectList = [
     {
       title: "Simple E-Commerce Website",
-      description: "A modern, premium e-commerce website interface designed with a focus on aesthetics, smooth transitions, and a stunning user experience. Built to 'Redefine Your Style Narrative'.",
+      description: "A modern, responsive e-commerce storefront for a clothing brand. Built with React and Vite, it features a dynamic product grid, category filtering, a seamless sliding cart drawer, and a smooth user experience across all devices.",
       techStack: ["React", "Vite", "CSS", "JavaScript"],
       image: "/ecommerce.png",
       liveLink: "https://simple-e-comerse.vercel.app/"
@@ -76,7 +76,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        
+
         <div className="projects-summary glass-card delay-300 animate-fade-in-up" style={{ marginTop: '3rem', padding: '2rem', textAlign: 'center' }}>
           <h3 style={{ marginBottom: '1rem', color: 'var(--text-primary)' }}>Additional Experience</h3>
           <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6' }}>

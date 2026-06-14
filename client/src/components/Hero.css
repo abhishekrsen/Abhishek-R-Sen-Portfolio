@@ -14,8 +14,8 @@
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
+  flex: 1 1 auto;
+  max-width: 750px;
 }
 
 .hero-greeting {
@@ -52,10 +52,11 @@
 }
 
 .hero-image-container {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-left: 1rem;
 }
 
 .hero-image-wrapper {

@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   background: radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 40%);
+  padding-top: 100px;
 }
 
 .hero-container {
@@ -101,11 +102,16 @@
 }
 
 @media (max-width: 992px) {
+  .hero-section {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   
   .hero-subtitle {
@@ -119,7 +125,9 @@
   }
 
   .hero-image-container {
+    padding-left: 0;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
   
   .hero-image-wrapper {

@@ -4,6 +4,13 @@ import './Projects.css';
 const Projects = () => {
   const projectList = [
     {
+      title: "Simple E-Commerce Website",
+      description: "A modern, premium e-commerce website interface designed with a focus on aesthetics, smooth transitions, and a stunning user experience. Built to 'Redefine Your Style Narrative'.",
+      techStack: ["React", "Vite", "CSS", "JavaScript"],
+      image: "/ecommerce.png",
+      liveLink: "https://simple-e-comerse.vercel.app/"
+    },
+    {
       title: "Smart Garbage Management System",
       description: "An IoT-based system using sensors and an ESP32 CAM for sorting waste. It detects the type of waste and streams live video to a custom website built with HTML, CSS, and JavaScript.",
       techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"],
@@ -27,6 +34,11 @@ const Projects = () => {
         <div className="projects-grid">
           {projectList.map((project, index) => (
             <div key={index} className={`project-card glass-card delay-${(index + 1) * 100} animate-fade-in-up`}>
+              {project.image && (
+                <div className="project-image-container">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
+              )}
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -39,6 +51,11 @@ const Projects = () => {
                   {project.reportLink && (
                     <a href={project.reportLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-sm">
                       View Report
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+                      Visit Site
                     </a>
                   )}
                   {project.codeLinks && (

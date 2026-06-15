@@ -15,10 +15,10 @@ const Projects = () => {
       description: "An IoT-based system using sensors and an ESP32 CAM for sorting waste. It detects the type of waste and streams live video to a custom website built with HTML, CSS, and JavaScript.",
       techStack: ["ESP32 CAM", "Sensors", "HTML", "CSS", "JavaScript"],
       image: "/garbage-system.png",
-      reportLink: "https://drive.google.com/file/d/1YEcMGSgfwmGjjiPVbOGfh4-9xAw8ayJN/view?usp=drive_link",
+      reportLink: "https://drive.google.com/file/d/1YEcMGSgfwmGjjiPVbOGfh4-9xAw8ayJN/view?usp=sharing",
       codeLinks: [
         { name: "Camera", url: "https://drive.google.com/file/d/1HoXVaWyebGqbxlNhFYAh0nh45botSTPP/view?usp=sharing" },
-        { name: "Arduino", url: "https://drive.google.com/file/d/1p3Oe0FKPgyY15Mczu9I0sKMy4S6BvFWv/view?usp=sharing" }
+        { name: "ESP-32", url: "https://drive.google.com/file/d/1p3Oe0FKPgyY15Mczu9I0sKMy4S6BvFWv/view?usp=sharing" }
       ]
     },
     {
